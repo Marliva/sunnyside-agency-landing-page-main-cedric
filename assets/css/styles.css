@@ -41,10 +41,10 @@ p {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    position: absolute;
     top: 2rem;
     padding: 0 1rem;
     margin-top: 2rem;
-    position: absolute;
     z-index: 1;
 }
 
@@ -53,7 +53,7 @@ p {
     display: none;
 }
 
-#menu ul {
+.menuList ul {
     display: none;
 }
 
@@ -183,7 +183,6 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    
 }
 
 .graphicDesignText h2,
@@ -319,4 +318,41 @@ footer {
 
 .socialImg img {
     width: 1.2rem;
+}
+
+
+/*------MEDIA QUERIES------*/
+
+@media screen and (min-width: 576px) {
+
+    #menu {
+        padding: 0 3rem;
+        margin-top: 1rem;
+    }
+
+    /*-------GESTION DU BURGER------*/
+
+    .menuList ul {
+        display: flex;
+    }
+
+    #menu #openmenu:not(:checked)~ul {
+        display: block;
+    }
+
+    #menu #openmenu:checked~ul {
+        display: flex;
+    }
+
+    #menu #openmenu:not(:checked)~label>img {
+        display: none;
+    }
+
+    #menu #openmenu:checked~label>img {
+        display: none;
+    }
+
+    .menuList ul li{
+        display: flex;
+    }
 }
