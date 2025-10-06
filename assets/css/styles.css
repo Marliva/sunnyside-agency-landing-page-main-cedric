@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --red: #fe7867ff;
+    --yellow: #fad400ff;
+    --green: #25564bff;
+    --blue: #19536bff;
+    --green-footer: #458c7dff;
+    --grey950: #23303eff;
+    --grey600: #5a636cff;
+    --grey550: #818498ff;
+    --grey400: #a7abaeff;
+    --white: #ffffffff;
+
+    --Fraunces: "Fraunces", sans-serif;
+    --Barlow: "Barlow", sans-serif;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-size: 18px;
+}
+
+/*------HEADER------*/
+
+/*------MENU------*/
+#menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 2rem;
+    padding: 0 1rem;
+    margin-top: 2rem;
+    position: absolute;
+    z-index: 1;
+}
+
+/* ------GESTION DU BURGER------ */
+#openmenu {
+    display: none;
+}
+
+#menu ul {
+    display: none;
+}
+
+#menu #openmenu:not(:checked)~ul {
+    display: none;
+}
+
+#menu #openmenu:checked~ul {
+    display: block;
+}
+
+#menu #openmenu:not(:checked)~label>img {
+    content: url("../images/icon-hamburger.svg");
+}
+
+#menu #openmenu:checked~label>img {
+    content: url("../images/icon-hamburger.svg");
+}
+
+/*------HERO------*/
+
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.bgImg {
+    background-image: url("../images/mobile/image-header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+h1 {
+    font-family: var(--Fraunces);
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--white);
+    margin-top: 20rem;
+    z-index: 1;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 15rem;
+    z-index: 1;
+
+}
+
+.arrow img {
+    height: 12rem;
+}
+
+/*------MAIN------*/
+
+#brand,
+#standOut {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 90vh;
+}
+
+#brand h2,
+#standOut h2 {
+    font-family: var(--Fraunces);
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--grey950);
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+#brand p,
+#standOut p {
+    font-family: var(--Barlow);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--grey600);
+    line-height: 2rem;
+    padding: 0 1rem;
+    margin-bottom: 4rem;
+}
+
+#brand a,
+#standOut a {
+    font-family: var(--Fraunces);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--grey950);
+    text-transform: uppercase;
+}
+
+#graphicDesign,
+#photography {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+#graphicDesign {
+    background-image: url("../images/mobile/image-graphic-design.jpg");
+}
+
+#photography {
+    background-image: url("../images/mobile/image-photography.jpg");
+}
+
+.graphicDesignText,
+.photographyText {
+    height: 80vh;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+.graphicDesignText h2,
+.photographyText h2 {
+    font-family: var(--Fraunces);
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.graphicDesignText p,
+.photographyText p {
+    font-family: var(--Barlow);
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-bottom: 5rem;
+    padding: 0 1rem;
+}
+
+.graphicDesignText h2,
+.graphicDesignText p {
+    color: var(--green);
+}
+
+.photographyText h2,
+.photographyText p {
+    color: var(--blue);
+}
+
+/*------TESTIMONIALS------*/
+
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-family: var(--Fraunces);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--grey550);
+    margin-top: 3rem;
+}
+
+.avatar img {
+    border-radius: 50%;
+    width: 4rem;
+    margin-top: 4rem;
+}
+
+.testimonialCard p {
+    font-family: var(--Barlow);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--grey600);
+    line-height: 2rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+.testimonialCard h3 {
+    font-family: var(--Fraunces);
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--grey950);
+    margin-top: 2rem;
+}
+
+.testimonialCard h4 {
+    font-family: var(--Barlow);
+    font-weight: 600;
+    font-size: .9rem;
+    color: var(--grey550);
+    margin-top: .5rem;
+}
+
+/*------GALLERY------*/
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+}
+
+.galleryImg {
+    width: 50%;
+}
+
+/*------FOOTER------*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--green-footer);
+    height: 42vh;
+}
+
+.footerLogo {
+    margin-top: 5rem;
+}
+
+.footerLogo img {
+    width: 13rem;
+}
+
+.footerNav {
+    margin-top: 3rem;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: space-around;
+    font-family: "Barlow";
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--green);
+}
+
+.footerSocial {
+    width: 50%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.socialImg {
+    margin: 0 1rem;
+}
+
+.socialImg img {
+    width: 1.2rem;
+}
